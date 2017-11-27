@@ -13,10 +13,10 @@ Find me on twitter at https://twitter.com/lancewmccarthy
 
 Screenshots:
 
-![alt text](https://github.com/LanceMcCarthy/ComicVine/Screenshots/CharacterDetailsPageSS.png)
+![alt text](https://github.com/LanceMcCarthy/ComicVine/blob/master/Screenshots/CharacterDetailsPageSS.png)
 
-![alt text](https://github.com/LanceMcCarthy/ComicVine/Screenshots/VideoDetailsPageSS.png)
+![alt text](https://github.com/LanceMcCarthy/ComicVine/blob/master/Screenshots/VideoDetailsPageSS.png)
 
-![alt text](https://github.com/LanceMcCarthy/ComicVine/Screenshots/CharactersPageSS.png)
+![alt text](https://github.com/LanceMcCarthy/ComicVine/blob/master/Screenshots/CharactersPageSS.png)
 
 

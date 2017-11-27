@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:ComicVine.Portable.ViewModels;assembly=ComicVine.Portable"
+             xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="ComicVine.Portable.Views.VideoDetailPage">
+    
+    <ContentPage.BindingContext>
+        <viewModels:VideoDetailViewModel x:Name="ViewModel"/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <forms:CachedImage x:Name="BannerImage" Source="{Binding SelectedVideo.Image.ScreenUrl}" Aspect="AspectFill" LoadingPlaceholder="loading_placeholder.png"  />
+            
+            <WebView x:Name="VideoWebView" Source="{Binding SelectedVideo.EmbedPlayer}" HeightRequest="200"/>
+
+            <StackLayout Grid.Row="1" Margin="10" Spacing="5">
+                <Label Text="{Binding SelectedVideo.Name}" FontSize="Large" FontAttributes="Bold" />
+                <Label Text="{Binding SelectedVideo.LengthSeconds, StringFormat='{0} seconds'}" FontSize="Medium" FontAttributes="Italic" Margin="0,0,0,10"/>
+                <Label Text="{Binding SelectedVideo.Deck}" LineBreakMode="WordWrap" Margin="0,0,0,10"/>
+                <Label Text="{Binding SelectedVideo.PublishDate, StringFormat='Published: {0:MMMM dd, yyyy}'}"/>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

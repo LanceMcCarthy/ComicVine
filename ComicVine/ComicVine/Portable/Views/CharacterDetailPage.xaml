@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:viewModels="clr-namespace:ComicVine.Portable.ViewModels;assembly=ComicVine.Portable"
+             x:Class="ComicVine.Portable.Views.CharacterDetailPage"
+             Title="{Binding Title}">
+    
+    <ContentPage.BindingContext>
+        <viewModels:CharacterDetailViewModel x:Name="ViewModel"/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <forms:CachedImage x:Name="BannerImage" Source="{Binding SelectedCharacter.Image.ScreenUrl}" Aspect="AspectFill" LoadingPlaceholder="loading_placeholder.png"  />
+
+            <StackLayout Grid.Row="1" Margin="10" Spacing="5">
+                <Label Text="{Binding SelectedCharacter.Name}" FontSize="Large" FontAttributes="Bold" />
+                <Label Text="{Binding SelectedCharacter.RealName, StringFormat='aka {0}'}" FontSize="Medium" FontAttributes="Italic" Margin="0,0,0,10"/>
+                <Label Text="{Binding SelectedCharacter.Deck}" LineBreakMode="WordWrap" Margin="0,0,0,10"/>
+                <Label Text="{Binding SelectedCharacter.DateAdded, StringFormat='Added: {0:MMMM dd, yyyy}'}"/>
+                <Label Text="{Binding SelectedCharacter.DateLastUpdated, StringFormat='Last Updated: {0:MMMM dd, yyyy}'}" Margin="0,0,0,10"/>
+                <Label Text="{Binding SelectedCharacter.Aliases, StringFormat='Aliases: {0}'}"/>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

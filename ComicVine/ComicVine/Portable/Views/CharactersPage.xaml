@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Name="Page"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:viewModels="clr-namespace:ComicVine.Portable.ViewModels;assembly=ComicVine.Portable"
+             xmlns:listView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:primitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:converters="clr-namespace:ComicVine.Portable.Converters;assembly=ComicVine.Portable"
+             xmlns:behaviors="clr-namespace:ComicVine.Portable.Behaviors;assembly=ComicVine.Portable"
+             x:Class="ComicVine.Portable.Views.CharactersPage">
+
+    <ContentPage.BindingContext>
+        <viewModels:CharactersViewModel x:Name="ViewModel"/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:InvertBoolConverter x:Key="InvertBoolConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid BackgroundColor="LightBlue">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5">
+                <Label Text="{Binding CurrentItemCount, StringFormat='{0:N0} characters loaded from '}"/>
+                <Label Text="{Binding TotalItemCount, StringFormat='{0:N0} total'}"/>
+            </StackLayout>
+        </Grid>
+
+        <telerikDataControls:RadListView x:Name="listView"
+                                         ItemsSource="{Binding Characters}"
+                                         IsLoadOnDemandEnabled="True"
+                                         IsLoadOnDemandActive="{Binding IsLoadOnDemandActive, Mode=TwoWay}"
+                                         SelectionMode="None"
+                                         ItemTapped="ListView_OnItemTapped"
+                                         LoadOnDemandMode="Manual"
+                                         Grid.Row="1">
+            <telerikDataControls:RadListView.Behaviors>
+                <behaviors:EventToCommandBehavior EventName="LoadOnDemand" Command="{Binding LoadOnDemandCommand}"/>
+            </telerikDataControls:RadListView.Behaviors>
+            <telerikDataControls:RadListView.LoadOnDemandItemTemplate>
+                <DataTemplate>
+                    <Grid IsVisible="{Binding IsBusy, Converter={StaticResource InvertBoolConverter}}" BackgroundColor="Red">
+                        <Label FontSize="24"
+                               HorizontalOptions="Center"
+                               Text="Tap to load more items"
+                               TextColor="Black" 
+                               Margin="10"/>
+                    </Grid>
+                </DataTemplate>
+            </telerikDataControls:RadListView.LoadOnDemandItemTemplate>
+            <telerikDataControls:RadListView.ItemTemplate>
+                <DataTemplate>
+                    <listView:ListViewTemplateCell>
+                        <listView:ListViewTemplateCell.View>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="85"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <forms:CachedImage Source="{Binding Image.ThumbUrl}" 
+                                                   LoadingPlaceholder="loading_placeholder.png"
+                                                   WidthRequest="75" HeightRequest="100" Margin="5"
+                                                   VerticalOptions="Start"/>
+
+                                <StackLayout Grid.Column="1">
+                                    <Label Text="{Binding Name}" FontSize="Large" FontAttributes="Bold" Margin="0,5,0,5"/>
+                                    <Label Text="{Binding Deck}" LineBreakMode="WordWrap"/>
+                                </StackLayout>
+                            </Grid>
+                        </listView:ListViewTemplateCell.View>
+                    </listView:ListViewTemplateCell>
+                </DataTemplate>
+            </telerikDataControls:RadListView.ItemTemplate>
+            <telerikDataControls:RadListView.LayoutDefinition>
+                <listView:ListViewLinearLayout VerticalItemSpacing="5" />
+            </telerikDataControls:RadListView.LayoutDefinition>
+        </telerikDataControls:RadListView>
+
+        <primitives:RadBusyIndicator x:Name="radBusyIndicator"
+                                     AnimationContentHeightRequest="100"
+                                     AnimationContentWidthRequest="100"
+                                     AnimationType="Animation4"
+                                     AnimationContentColor="LightBlue"
+                                     IsVisible="{Binding IsBusy}"
+                                     IsBusy="{Binding IsBusy}"
+                                     Grid.Row="0" Grid.RowSpan="2">
+            <primitives:RadBusyIndicator.Content>
+                <Grid BindingContext="{x:Reference Page}" 
+                      WidthRequest="{Binding Width}" 
+                      HeightRequest="{Binding Height}"/>
+            </primitives:RadBusyIndicator.Content>
+        </primitives:RadBusyIndicator>
+    </Grid>
+</ContentPage>

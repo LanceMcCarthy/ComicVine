@@ -13,7 +13,7 @@ Find me on twitter at https://twitter.com/lancewmccarthy
 
 Screenshots:
 
-![alt text](https://github.com/LanceMcCarthy/ComicVine/blob/master/Screenshots/CharacterDetailsPageSS.png)
+![alt text](https://github.com/LanceMcCarthy/ComicVine/blob/master/Screenshots/CharacterDetailsSS.png)
 
 ![alt text](https://github.com/LanceMcCarthy/ComicVine/blob/master/Screenshots/VideoDetailsPageSS.png)
 

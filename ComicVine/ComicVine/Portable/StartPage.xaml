@@ -10,16 +10,16 @@
         </Grid.RowDefinitions>
 
         <StackLayout VerticalOptions="Center">
-            <Label Text="ComicVine" HorizontalOptions="Center" FontSize="Large" Margin="10" />
-            <Label Text="featuring" HorizontalOptions="Center" FontAttributes="Italic" />
-            <Label Text="Telerik UI for Xamarin" HorizontalOptions="Center" FontSize="Medium" />
+            <Label Text="ComicVine" HorizontalOptions="Center" TextColor="#A8000000" FontSize="42" FontAttributes="Bold" Margin="10" />
+            <Label Text="featuring" HorizontalOptions="Center" FontAttributes="Italic" FontSize="Small" TextColor="DarkGray"/>
+            <Label Text="Telerik UI for Xamarin" HorizontalOptions="Center" FontSize="Large"  TextColor="#A8000000"/>
         </StackLayout>
 
         <StackLayout VerticalOptions="Center" Grid.Row="1">
-            <Button Text="See Characters" Clicked="CharactersButton_OnClicked" Margin="5"/>
-            <Button Text="See Videos" Clicked="VideosButton_OnClicked" Margin="5"/>
+            <Button Text="Explore Characters" Clicked="CharactersButton_OnClicked" Margin="5"/>
+            <Button Text="Watch Videos" Clicked="VideosButton_OnClicked" Margin="5"/>
         </StackLayout>
 
-        <Button Text="About" Grid.Row="2" Margin="10" Clicked="AboutButton_OnClicked"/>
+        <Button Text="About" Grid.Row="2" Margin="10" Clicked="AboutButton_OnClicked" />
     </Grid>
 </ContentPage>

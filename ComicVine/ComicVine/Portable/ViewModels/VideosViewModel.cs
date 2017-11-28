@@ -49,9 +49,7 @@ namespace ComicVine.Portable.ViewModels
             {
                 IsBusy = true;
                 IsBusyMessage = "Getting Videos from API...";
-
-                Debug.WriteLine($"API Call BEGIN- CurrentItemCount: {CurrentItemCount}");
-
+                
                 var apiResult = await ApiService.GetVideosAsync(CurrentItemCount);
 
                 if (apiResult == null)
@@ -64,14 +62,11 @@ namespace ComicVine.Portable.ViewModels
                 {
                     Videos.Add(character);
                 }
-
-                Debug.WriteLine($"API Call END - CurrentItemCount: {CurrentItemCount}");
-
+                
             }
             catch (Exception exception)
             {
-                Debug.WriteLine($"WAAAAAAAAA:\r\n\n{exception}\n\n");
-                throw;
+                Debug.WriteLine($"VideosViewModel GetItemsAsync Exception: {exception}");
             }
             finally
             {

@@ -49,9 +49,7 @@ namespace ComicVine.Portable.ViewModels
             {
                 IsBusy = true;
                 IsBusyMessage = "Getting Characters from API...";
-
-                Debug.WriteLine($"API Call BEGIN- CurrentItemCount: {CurrentItemCount}");
-
+                
                 var apiResult = await ApiService.GetCharactersAsync(CurrentItemCount);
 
                 if (apiResult == null)
@@ -64,14 +62,10 @@ namespace ComicVine.Portable.ViewModels
                 {
                     Characters.Add(character);
                 }
-
-                Debug.WriteLine($"API Call END - CurrentItemCount: {CurrentItemCount}");
-
             }
             catch (Exception exception)
             {
-                Debug.WriteLine($"WAAAAAAAAA:\r\n\n{exception}\n\n");
-                throw;
+                Debug.WriteLine($"CharactersViewModel GetItemsAsync Exception: {exception}");
             }
             finally
             {

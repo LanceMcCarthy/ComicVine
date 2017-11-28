@@ -18,6 +18,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:InvertBoolConverter x:Key="InvertBoolConverter"/>
+            <converters:SecondsToTimeSpanConverter x:Key="TimeSpanConverter"/>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -61,19 +62,14 @@
                     <listView:ListViewTemplateCell>
                         <listView:ListViewTemplateCell.View>
                             <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="85"/>
-                                    <ColumnDefinition/>
-                                </Grid.ColumnDefinitions>
-
-                                <forms:CachedImage Source="{Binding Image.ThumbUrl}" 
+                                <forms:CachedImage Source="{Binding Image.ScreenUrl}" 
                                                    LoadingPlaceholder="loading_placeholder.png"
-                                                   WidthRequest="75" HeightRequest="100" Margin="5"
                                                    VerticalOptions="Start"/>
 
-                                <StackLayout Grid.Column="1">
-                                    <Label Text="{Binding Name}" FontSize="Large" FontAttributes="Bold" Margin="0,5,0,5"/>
-                                    <Label Text="{Binding Deck}" LineBreakMode="WordWrap"/>
+                                <StackLayout VerticalOptions="End" BackgroundColor="#B1000000" Padding="5">
+                                    <Label Text="{Binding Name}" FontAttributes="Bold" TextColor="White"/>
+                                    <Label Text="{Binding LengthSeconds, Converter={StaticResource TimeSpanConverter}, StringFormat='{0:c}'}" TextColor="White" FontAttributes="Italic"/>
+                                    <!--<Label Text="{Binding Deck}" TextColor="White" LineBreakMode="WordWrap"/>-->
                                 </StackLayout>
                             </Grid>
                         </listView:ListViewTemplateCell.View>

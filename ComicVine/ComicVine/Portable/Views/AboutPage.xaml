@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:ComicVine.Portable.Controls;assembly=ComicVine.Portable"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             ios:Page.LargeTitleDisplay="Automatic"
              x:Class="ComicVine.Portable.Views.AboutPage">
     
     <StackLayout Spacing="5" Margin="20">

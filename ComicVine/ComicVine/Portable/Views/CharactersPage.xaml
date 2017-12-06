@@ -9,6 +9,9 @@
              xmlns:primitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
              xmlns:converters="clr-namespace:ComicVine.Portable.Converters;assembly=ComicVine.Portable"
              xmlns:behaviors="clr-namespace:ComicVine.Portable.Behaviors;assembly=ComicVine.Portable"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             ios:Page.LargeTitleDisplay="Automatic"
              x:Class="ComicVine.Portable.Views.CharactersPage">
 
     <ContentPage.BindingContext>

@@ -43,7 +43,7 @@
                                          IsLoadOnDemandActive="{Binding IsLoadOnDemandActive, Mode=TwoWay}"
                                          SelectionMode="None"
                                          ItemTapped="ListView_OnItemTapped"
-                                         LoadOnDemandMode="Manual"
+                                         LoadOnDemandMode="Automatic"
                                          Grid.Row="1">
             <telerikDataControls:RadListView.Behaviors>
                 <behaviors:EventToCommandBehavior EventName="LoadOnDemand" Command="{Binding LoadOnDemandCommand}"/>

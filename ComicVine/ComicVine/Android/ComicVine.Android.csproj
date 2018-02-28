@@ -81,62 +81,78 @@
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
     <Reference Include="SkiaSharp, Version=1.59.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SkiaSharp.1.59.2\lib\MonoAndroid\SkiaSharp.dll</HintPath>
+      <HintPath>..\..\packages\SkiaSharp.1.59.3\lib\MonoAndroid\SkiaSharp.dll</HintPath>
     </Reference>
     <Reference Include="SkiaSharp.Views.Android, Version=1.59.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SkiaSharp.Views.1.59.2\lib\MonoAndroid\SkiaSharp.Views.Android.dll</HintPath>
+      <HintPath>..\..\packages\SkiaSharp.Views.1.59.3\lib\MonoAndroid\SkiaSharp.Views.Android.dll</HintPath>
     </Reference>
     <Reference Include="SkiaSharp.Views.Forms, Version=1.59.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SkiaSharp.Views.Forms.1.59.2\lib\MonoAndroid\SkiaSharp.Views.Forms.dll</HintPath>
+      <HintPath>..\..\packages\SkiaSharp.Views.Forms.1.59.3\lib\MonoAndroid\SkiaSharp.Views.Forms.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="Telerik.Documents.SpreadsheetStreaming">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R3 2017\Binaries\Portable\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
+    <Reference Include="Telerik.Xamarin.Android.Chart, Version=2017.3.1123.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Android\Telerik.Xamarin.Android.Chart.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Xamarin.Android.Chart">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R3 2017\Binaries\Android\Telerik.Xamarin.Android.Chart.dll</HintPath>
+    <Reference Include="Telerik.Xamarin.Android.Common, Version=2017.3.1123.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Android\Telerik.Xamarin.Android.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Xamarin.Android.Common">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R3 2017\Binaries\Android\Telerik.Xamarin.Android.Common.dll</HintPath>
+    <Reference Include="Telerik.Xamarin.Android.Data, Version=2017.3.1123.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Android\Telerik.Xamarin.Android.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Xamarin.Android.Data">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R3 2017\Binaries\Android\Telerik.Xamarin.Android.Data.dll</HintPath>
+    <Reference Include="Telerik.Xamarin.Android.Feedback">
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Android\Telerik.Xamarin.Android.Feedback.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Xamarin.Android.Input">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R3 2017\Binaries\Android\Telerik.Xamarin.Android.Input.dll</HintPath>
+    <Reference Include="Telerik.Xamarin.Android.Gauges">
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Android\Telerik.Xamarin.Android.Gauges.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Xamarin.Android.List">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R3 2017\Binaries\Android\Telerik.Xamarin.Android.List.dll</HintPath>
+    <Reference Include="Telerik.Xamarin.Android.Input, Version=2017.3.1123.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Android\Telerik.Xamarin.Android.Input.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Xamarin.Android.Primitives">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R3 2017\Binaries\Android\Telerik.Xamarin.Android.Primitives.dll</HintPath>
+    <Reference Include="Telerik.Xamarin.Android.List, Version=2017.3.1123.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Android\Telerik.Xamarin.Android.List.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.XamarinForms.Chart">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R3 2017\Binaries\Android\Telerik.XamarinForms.Chart.dll</HintPath>
+    <Reference Include="Telerik.Xamarin.Android.Primitives, Version=2017.3.1123.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Android\Telerik.Xamarin.Android.Primitives.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.XamarinForms.Common">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R3 2017\Binaries\Android\Telerik.XamarinForms.Common.dll</HintPath>
+    <Reference Include="Telerik.XamarinForms.Chart, Version=2017.3.1123.240, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Android\Telerik.XamarinForms.Chart.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.XamarinForms.DataControls">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R3 2017\Binaries\Android\Telerik.XamarinForms.DataControls.dll</HintPath>
+    <Reference Include="Telerik.XamarinForms.Common, Version=2017.3.1123.240, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Android\Telerik.XamarinForms.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.XamarinForms.DataVisualization">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R3 2017\Binaries\Android\Telerik.XamarinForms.DataVisualization.dll</HintPath>
+    <Reference Include="Telerik.XamarinForms.DataControls, Version=2017.3.1123.240, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Android\Telerik.XamarinForms.DataControls.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.XamarinForms.Input">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R3 2017\Binaries\Android\Telerik.XamarinForms.Input.dll</HintPath>
+    <Reference Include="Telerik.XamarinForms.DataGrid">
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Android\Telerik.XamarinForms.DataGrid.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.XamarinForms.Primitives">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R3 2017\Binaries\Android\Telerik.XamarinForms.Primitives.dll</HintPath>
+    <Reference Include="Telerik.XamarinForms.DataVisualization, Version=2017.3.1123.240, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Android\Telerik.XamarinForms.DataVisualization.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.XamarinForms.SkiaSharp">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R3 2017\Binaries\Android\Telerik.XamarinForms.SkiaSharp.dll</HintPath>
+    <Reference Include="Telerik.XamarinForms.Input, Version=2017.3.1123.240, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Android\Telerik.XamarinForms.Input.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Zip">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R3 2017\Binaries\Portable\Telerik.Zip.dll</HintPath>
+    <Reference Include="Telerik.XamarinForms.Primitives, Version=2017.3.1123.240, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Android\Telerik.XamarinForms.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.SkiaSharp, Version=2017.3.1123.240, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Android\Telerik.XamarinForms.SkiaSharp.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>

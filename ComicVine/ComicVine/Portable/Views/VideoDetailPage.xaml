@@ -6,6 +6,7 @@
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              ios:Page.UseSafeArea="true"
              ios:Page.LargeTitleDisplay="Automatic"
+             Title="{Binding SelectedVideo.Name}"
              x:Class="ComicVine.Portable.Views.VideoDetailPage">
     
     <ContentPage.BindingContext>

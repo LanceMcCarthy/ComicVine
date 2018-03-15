@@ -4,6 +4,7 @@
     "SkiaSharp": "1.59.3",
     "SkiaSharp.Views": "1.59.3",
     "SkiaSharp.Views.Forms": "1.59.3",
+    "Telerik.UI.for.Xamarin": "2018.1.315.1",
     "Xamarin.FFImageLoading.Forms": "2.2.25",
     "Xamarin.Forms": "2.5.0.91635"
   },

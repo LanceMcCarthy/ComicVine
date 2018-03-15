@@ -12,6 +12,7 @@
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              ios:Page.UseSafeArea="true"
              ios:Page.LargeTitleDisplay="Automatic"
+             Title="{Binding Title}"
              x:Class="ComicVine.Portable.Views.CharactersPage">
 
     <ContentPage.BindingContext>

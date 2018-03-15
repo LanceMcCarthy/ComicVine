@@ -155,40 +155,32 @@
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="Telerik.Xamarin.iOS, Version=2017.3.1123.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\iOS\Telerik.Xamarin.iOS.dll</HintPath>
+    <Reference Include="Telerik.Xamarin.iOS, Version=2018.1.315.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.2018.1.315.1\lib\xamarinios10\Telerik.Xamarin.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.XamarinForms.Chart, Version=2017.3.1123.240, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\iOS\Telerik.XamarinForms.Chart.dll</HintPath>
+    <Reference Include="Telerik.XamarinForms.Chart, Version=2018.1.315.240, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.2018.1.315.1\lib\xamarinios10\Telerik.XamarinForms.Chart.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.XamarinForms.Common, Version=2017.3.1123.240, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\iOS\Telerik.XamarinForms.Common.dll</HintPath>
+    <Reference Include="Telerik.XamarinForms.Common, Version=2018.1.315.240, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.2018.1.315.1\lib\xamarinios10\Telerik.XamarinForms.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.XamarinForms.DataControls, Version=2017.3.1123.240, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\iOS\Telerik.XamarinForms.DataControls.dll</HintPath>
+    <Reference Include="Telerik.XamarinForms.DataControls, Version=2018.1.315.240, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.2018.1.315.1\lib\xamarinios10\Telerik.XamarinForms.DataControls.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.XamarinForms.DataGrid">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\iOS\Telerik.XamarinForms.DataGrid.dll</HintPath>
+    <Reference Include="Telerik.XamarinForms.DataGrid, Version=2018.1.315.240, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.2018.1.315.1\lib\xamarinios10\Telerik.XamarinForms.DataGrid.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.XamarinForms.DataVisualization, Version=2017.3.1123.240, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\iOS\Telerik.XamarinForms.DataVisualization.dll</HintPath>
+    <Reference Include="Telerik.XamarinForms.DataVisualization, Version=2018.1.315.240, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.2018.1.315.1\lib\xamarinios10\Telerik.XamarinForms.DataVisualization.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.XamarinForms.Input, Version=2017.3.1123.240, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\iOS\Telerik.XamarinForms.Input.dll</HintPath>
+    <Reference Include="Telerik.XamarinForms.Input, Version=2018.1.315.240, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.2018.1.315.1\lib\xamarinios10\Telerik.XamarinForms.Input.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.XamarinForms.Primitives, Version=2017.3.1123.240, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\iOS\Telerik.XamarinForms.Primitives.dll</HintPath>
+    <Reference Include="Telerik.XamarinForms.Primitives, Version=2018.1.315.240, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.2018.1.315.1\lib\xamarinios10\Telerik.XamarinForms.Primitives.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.XamarinForms.SkiaSharp, Version=2017.3.1123.240, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\iOS\Telerik.XamarinForms.SkiaSharp.dll</HintPath>
+    <Reference Include="Telerik.XamarinForms.SkiaSharp, Version=2018.1.315.240, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.2018.1.315.1\lib\xamarinios10\Telerik.XamarinForms.SkiaSharp.dll</HintPath>
     </Reference>
     <Reference Include="WebP.Touch, Version=1.0.6443.32796, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\WebP.Touch.1.0.4\lib\Xamarin.iOS10\WebP.Touch.dll</HintPath>

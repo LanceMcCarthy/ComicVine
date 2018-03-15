@@ -1,17 +1,18 @@
 # ComicVine
 
-A fun Xamarin.Forms application that showcases UI for Xamarin using the ComicVine API.
+A fun Xamarin.Forms demo application that showcases UI for Xamarin RadListView using the ComicVine API.
 
-You'll need 2 things to run this, super easy to get
+Easy-breezy steps to run this demo:
 
-- Get your API Key here (free): https://comicvine.gamespot.com/api/
-- Get UI for Xamarin here (free trial): https://www.telerik.com/xamarin-ui 
+- [Get UI for Xamarin license here](https://www.telerik.com/xamarin-ui) (click the "Download Free Trial" button to be assigned a license):  
+- Add the Telerik NuGet server as a package source ([instructions here](https://docs.telerik.com/devtools/xamarin/installation-and-deployment/telerik-nuget-server))
+- Rebuild and Deploy!
 
-**Important:** See my code comments in *Portable/Services/ApiKeys.cs*
+**Note:** If you intend on extending this demo, replace the API key in *Portable/Services/ApiKeys.cs* with your own. [Get your own API Key here](https://comicvine.gamespot.com/api/) (it's free).
 
-Find me on twitter at https://twitter.com/lancewmccarthy 
+Any questions? Find me on twitter [@lancewmccarthy](https://twitter.com/lancewmccarthy)
 
-Screenshots:
+#### Screenshots:
 
 ![alt text](https://github.com/LanceMcCarthy/ComicVine/blob/master/Screenshots/CharacterDetailsSS.png)
 

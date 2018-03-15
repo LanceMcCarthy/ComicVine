@@ -6,11 +6,6 @@ namespace ComicVine.Portable.ViewModels
     {
         private Character selectedCharacter;
 
-        public CharacterDetailViewModel()
-        {
-            Title = "Character Details";
-        }
-
         public Character SelectedCharacter
         {
             get => selectedCharacter;

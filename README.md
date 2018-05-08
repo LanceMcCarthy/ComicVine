@@ -2,7 +2,9 @@
 
 A fun Xamarin.Forms demo application that showcases UI for Xamarin RadListView using the ComicVine API.
 
-![alt text](https://build.appcenter.ms/v0.1/apps/b6b81a91-ff1f-4ec2-8859-6874b4fc3e30/branches/master/badge)
+Build Statuses
+* [![Build status](https://build.appcenter.ms/v0.1/apps/b6b81a91-ff1f-4ec2-8859-6874b4fc3e30/branches/master/badge)](https://appcenter.ms) - iOS
+* [![Build status](https://build.appcenter.ms/v0.1/apps/39a7eb39-7b69-417a-a7b4-c25766907feb/branches/master/badge)](https://appcenter.ms) - Android
 
 
 Easy-breezy steps to run this demo:

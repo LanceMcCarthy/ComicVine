@@ -10,7 +10,7 @@
              xmlns:converters="clr-namespace:ComicVine.Portable.Converters;assembly=ComicVine.Portable"
              xmlns:behaviors="clr-namespace:ComicVine.Portable.Behaviors;assembly=ComicVine.Portable"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-             xmlns:customCells="clr-namespace:ComicVine.Portable.CustomCells;assembly=ComicVine.Portable"
+             xmlns:common="clr-namespace:ComicVine.Portable.Common;assembly=ComicVine.Portable"
              ios:Page.UseSafeArea="true"
              ios:Page.LargeTitleDisplay="Automatic"
              Title="{Binding Title}"
@@ -23,6 +23,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:InvertBoolConverter x:Key="InvertBoolConverter" />
+            <converters:CustomImageSourceConverter x:Key="CustomImageSourceConverter"/>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -67,32 +68,30 @@
             </telerikDataControls:RadListView.LoadOnDemandItemTemplate>
             <telerikDataControls:RadListView.ItemTemplate>
                 <DataTemplate>
-                    <customCells:CustomListViewTemplateCell>
-                        <customCells:CustomListViewTemplateCell.View>
+                    <listView:ListViewTemplateCell>
+                        <listView:ListViewTemplateCell.View>
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="85" />
-                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="85"/>
+                                    <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
 
-                                <forms:CachedImage x:Name="ThumbnailCachedImage"
+                                <forms:CachedImage Source="{Binding Converter={StaticResource CustomImageSourceConverter}}" 
                                                    LoadingPlaceholder="loading_placeholder.png"
-                                                   WidthRequest="75"
-                                                   HeightRequest="100"
-                                                   Margin="5"
-                                                   VerticalOptions="Start" />
+                                                   WidthRequest="75" HeightRequest="100" Margin="5"
+                                                   VerticalOptions="Start">
+                                    <forms:CachedImage.CacheKeyFactory>
+                                        <common:CustomCacheKeyFactory/>
+                                    </forms:CachedImage.CacheKeyFactory>
+                                </forms:CachedImage>
 
                                 <StackLayout Grid.Column="1">
-                                    <Label x:Name="NameLabel"
-                                           FontSize="Large"
-                                           FontAttributes="Bold"
-                                           Margin="0,5,0,5" />
-                                    <Label x:Name="DecriptionLabel"
-                                           LineBreakMode="WordWrap" />
+                                    <Label Text="{Binding Name}" FontSize="Large" FontAttributes="Bold" Margin="0,5,0,5"/>
+                                    <Label Text="{Binding Deck}" LineBreakMode="WordWrap"/>
                                 </StackLayout>
                             </Grid>
-                        </customCells:CustomListViewTemplateCell.View>
-                    </customCells:CustomListViewTemplateCell>
+                        </listView:ListViewTemplateCell.View>
+                    </listView:ListViewTemplateCell>
                 </DataTemplate>
             </telerikDataControls:RadListView.ItemTemplate>
             <telerikDataControls:RadListView.LayoutDefinition>

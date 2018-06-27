@@ -9,7 +9,8 @@
              xmlns:listView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
              xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:primitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
-             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:customCells="clr-namespace:ComicVine.Portable.CustomCells;assembly=ComicVine.Portable"
              ios:Page.UseSafeArea="true"
              ios:Page.LargeTitleDisplay="Automatic"
              Title="{Binding Title}"
@@ -22,7 +23,6 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:InvertBoolConverter x:Key="InvertBoolConverter"/>
-            <converters:SecondsToTimeSpanConverter x:Key="TimeSpanConverter"/>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -63,21 +63,20 @@
             </dataControls:RadListView.LoadOnDemandItemTemplate>
             <dataControls:RadListView.ItemTemplate>
                 <DataTemplate>
-                    <listView:ListViewTemplateCell>
-                        <listView:ListViewTemplateCell.View>
+                    <customCells:CustomListViewTemplateCell>
+                        <customCells:CustomListViewTemplateCell.View>
                             <Grid>
-                                <forms:CachedImage Source="{Binding Image.ScreenUrl}" 
+                                <forms:CachedImage x:Name="ScreenCachedImage" 
                                                    LoadingPlaceholder="loading_placeholder.png"
                                                    VerticalOptions="Start"/>
 
                                 <StackLayout VerticalOptions="End" BackgroundColor="#B1000000" Padding="5">
-                                    <Label Text="{Binding Name}" FontAttributes="Bold" TextColor="White"/>
-                                    <Label Text="{Binding LengthSeconds, Converter={StaticResource TimeSpanConverter}, StringFormat='{0:c}'}" TextColor="White" FontAttributes="Italic"/>
-                                    <!--<Label Text="{Binding Deck}" TextColor="White" LineBreakMode="WordWrap"/>-->
+                                    <Label x:Name="NameLabel" FontAttributes="Bold" TextColor="White"/>
+                                    <Label x:Name="LengthOfVideoLabel" TextColor="White" FontAttributes="Italic"/>
                                 </StackLayout>
                             </Grid>
-                        </listView:ListViewTemplateCell.View>
-                    </listView:ListViewTemplateCell>
+                        </customCells:CustomListViewTemplateCell.View>
+                    </customCells:CustomListViewTemplateCell>
                 </DataTemplate>
             </dataControls:RadListView.ItemTemplate>
             <dataControls:RadListView.LayoutDefinition>
@@ -100,6 +99,4 @@
             </primitives:RadBusyIndicator.Content>
         </primitives:RadBusyIndicator>
     </Grid>
-
-
 </ContentPage>

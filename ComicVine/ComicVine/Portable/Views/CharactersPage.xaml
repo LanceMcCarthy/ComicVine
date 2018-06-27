@@ -9,32 +9,35 @@
              xmlns:primitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
              xmlns:converters="clr-namespace:ComicVine.Portable.Converters;assembly=ComicVine.Portable"
              xmlns:behaviors="clr-namespace:ComicVine.Portable.Behaviors;assembly=ComicVine.Portable"
-             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:customCells="clr-namespace:ComicVine.Portable.CustomCells;assembly=ComicVine.Portable"
              ios:Page.UseSafeArea="true"
              ios:Page.LargeTitleDisplay="Automatic"
              Title="{Binding Title}"
              x:Class="ComicVine.Portable.Views.CharactersPage">
 
     <ContentPage.BindingContext>
-        <viewModels:CharactersViewModel x:Name="ViewModel"/>
+        <viewModels:CharactersViewModel x:Name="ViewModel" />
     </ContentPage.BindingContext>
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <converters:InvertBoolConverter x:Key="InvertBoolConverter"/>
+            <converters:InvertBoolConverter x:Key="InvertBoolConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
         </Grid.RowDefinitions>
 
         <Grid BackgroundColor="LightBlue">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5">
-                <Label Text="{Binding CurrentItemCount, StringFormat='{0:N0} characters loaded from '}"/>
-                <Label Text="{Binding TotalItemCount, StringFormat='{0:N0} total'}"/>
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center"
+                         Margin="5">
+                <Label Text="{Binding CurrentItemCount, StringFormat='{0:N0} characters loaded from '}" />
+                <Label Text="{Binding TotalItemCount, StringFormat='{0:N0} total'}" />
             </StackLayout>
         </Grid>
 
@@ -47,41 +50,49 @@
                                          LoadOnDemandMode="Automatic"
                                          Grid.Row="1">
             <telerikDataControls:RadListView.Behaviors>
-                <behaviors:EventToCommandBehavior EventName="LoadOnDemand" Command="{Binding LoadOnDemandCommand}"/>
+                <behaviors:EventToCommandBehavior EventName="LoadOnDemand"
+                                                  Command="{Binding LoadOnDemandCommand}" />
             </telerikDataControls:RadListView.Behaviors>
             <telerikDataControls:RadListView.LoadOnDemandItemTemplate>
                 <DataTemplate>
-                    <Grid IsVisible="{Binding IsBusy, Converter={StaticResource InvertBoolConverter}}" BackgroundColor="Red">
+                    <Grid IsVisible="{Binding IsBusy, Converter={StaticResource InvertBoolConverter}}"
+                          BackgroundColor="Red">
                         <Label FontSize="24"
                                HorizontalOptions="Center"
                                Text="Tap to load more items"
-                               TextColor="Black" 
-                               Margin="10"/>
+                               TextColor="Black"
+                               Margin="10" />
                     </Grid>
                 </DataTemplate>
             </telerikDataControls:RadListView.LoadOnDemandItemTemplate>
             <telerikDataControls:RadListView.ItemTemplate>
                 <DataTemplate>
-                    <listView:ListViewTemplateCell>
-                        <listView:ListViewTemplateCell.View>
+                    <customCells:CustomListViewTemplateCell>
+                        <customCells:CustomListViewTemplateCell.View>
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="85"/>
-                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="85" />
+                                    <ColumnDefinition />
                                 </Grid.ColumnDefinitions>
 
-                                <forms:CachedImage Source="{Binding Image.ThumbUrl}" 
+                                <forms:CachedImage x:Name="ThumbnailCachedImage"
                                                    LoadingPlaceholder="loading_placeholder.png"
-                                                   WidthRequest="75" HeightRequest="100" Margin="5"
-                                                   VerticalOptions="Start"/>
+                                                   WidthRequest="75"
+                                                   HeightRequest="100"
+                                                   Margin="5"
+                                                   VerticalOptions="Start" />
 
                                 <StackLayout Grid.Column="1">
-                                    <Label Text="{Binding Name}" FontSize="Large" FontAttributes="Bold" Margin="0,5,0,5"/>
-                                    <Label Text="{Binding Deck}" LineBreakMode="WordWrap"/>
+                                    <Label x:Name="NameLabel"
+                                           FontSize="Large"
+                                           FontAttributes="Bold"
+                                           Margin="0,5,0,5" />
+                                    <Label x:Name="DecriptionLabel"
+                                           LineBreakMode="WordWrap" />
                                 </StackLayout>
                             </Grid>
-                        </listView:ListViewTemplateCell.View>
-                    </listView:ListViewTemplateCell>
+                        </customCells:CustomListViewTemplateCell.View>
+                    </customCells:CustomListViewTemplateCell>
                 </DataTemplate>
             </telerikDataControls:RadListView.ItemTemplate>
             <telerikDataControls:RadListView.LayoutDefinition>
@@ -96,11 +107,12 @@
                                      AnimationContentColor="LightBlue"
                                      IsVisible="{Binding IsBusy}"
                                      IsBusy="{Binding IsBusy}"
-                                     Grid.Row="0" Grid.RowSpan="2">
+                                     Grid.Row="0"
+                                     Grid.RowSpan="2">
             <primitives:RadBusyIndicator.Content>
-                <Grid BindingContext="{x:Reference Page}" 
-                      WidthRequest="{Binding Width}" 
-                      HeightRequest="{Binding Height}"/>
+                <Grid BindingContext="{x:Reference Page}"
+                      WidthRequest="{Binding Width}"
+                      HeightRequest="{Binding Height}" />
             </primitives:RadBusyIndicator.Content>
         </primitives:RadBusyIndicator>
     </Grid>

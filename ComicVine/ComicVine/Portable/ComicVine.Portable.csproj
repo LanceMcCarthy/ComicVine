@@ -42,6 +42,7 @@
     <Compile Include="Behaviors\EventToCommandBehavior.cs" />
     <Compile Include="Converters\InvertBoolConverter.cs" />
     <Compile Include="Converters\SecondsToTimeSpanConverter.cs" />
+    <Compile Include="CustomCells\CustomListViewTemplateCell.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\CharactersResult.cs" />
     <Compile Include="Models\First_Appeared_In_Issue.cs" />

@@ -1,11 +1,6 @@
-﻿using System;
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
-using FFImageLoading.Forms.Droid;
 
 namespace ComicVine.Android
 {
@@ -15,8 +10,11 @@ namespace ComicVine.Android
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            CachedImageRenderer.Init();
+
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);
+
             LoadApplication(new Portable.App());
         }
     }

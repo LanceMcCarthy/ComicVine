@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="keys.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="keys.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommonHelpers" Version="1.0.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.59.3" />
+    <PackageReference Include="Telerik.UI.for.Xamarin" Version="2018.3.912.1" />
+    <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.3.840" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.3.840" />
+    <PackageReference Include="Xamarin.Forms" Version="3.2.0.871581" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="StartPage.xaml.cs">
+      <DependentUpon>StartPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CharacterDetailPage.xaml.cs">
+      <DependentUpon>CharacterDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CharactersPage.xaml.cs">
+      <DependentUpon>CharactersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\VideoDetailPage.xaml.cs">
+      <DependentUpon>VideoDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\VideosPage.xaml.cs">
+      <DependentUpon>VideosPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>

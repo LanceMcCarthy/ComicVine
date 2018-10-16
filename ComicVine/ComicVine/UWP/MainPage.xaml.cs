@@ -1,4 +1,4 @@
-using FFImageLoading.Forms.WinUWP;
+
 
 namespace ComicVine.UWP
 {
@@ -7,8 +7,9 @@ namespace ComicVine.UWP
         public MainPage()
         {
             this.InitializeComponent();
-            CachedImageRenderer.Init();
-            LoadApplication(new Portable.App());
+
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
+            LoadApplication(new ComicVine.Forms.App());
         }
     }
 }

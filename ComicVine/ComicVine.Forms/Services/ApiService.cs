@@ -134,16 +134,29 @@ namespace ComicVine.Forms.Services
 
             var fileName = "keys.json";
 
-            using (var stream = typeof(ApiService).GetTypeInfo().Assembly.GetManifestResourceStream($"ComicVine.Forms.{fileName}"))
-            using (var reader = new StreamReader(stream ?? throw new NullReferenceException("The JSON file was not loaded. Hard code your API strings in ApiKey.cs to avoid this error.")))
+            try
             {
-                var json = reader.ReadToEnd();
+                var stream = typeof(ApiService).GetTypeInfo().Assembly.GetManifestResourceStream($"ComicVine.Forms.{fileName}");
 
-                var result = ApiKeyBase.FromJson(json);
+                if (stream == null)
+                    return;
 
-                ComicVineApiKey = result.ProtectedValues.ComicVineApiKey;
-                UniqueUserAgentString = result.ProtectedValues.UniqueUserAgentString;
+                using (var reader = new StreamReader(stream))
+                {
+                    var json = reader.ReadToEnd();
+
+                    var result = ApiKeyBase.FromJson(json);
+
+                    ComicVineApiKey = result.ProtectedValues.ComicVineApiKey;
+                    UniqueUserAgentString = result.ProtectedValues.UniqueUserAgentString;
+                }
             }
+            catch (Exception)
+            {
+                // You can safely remove this method once you add your API key at the top of this class
+                return;
+            }
+            
         }
     }
 }

@@ -16,7 +16,7 @@ namespace ComicVine.Forms.Converters
         public CustomImageSourceConverter()
         {
             _client = new HttpClient();
-            _client.DefaultRequestHeaders.Add("User-Agent", ApiService.UniqueUserAgentString);
+            _client.DefaultRequestHeaders.Add("User-Agent", ApiKeys.UniqueUserAgentString);
         }
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

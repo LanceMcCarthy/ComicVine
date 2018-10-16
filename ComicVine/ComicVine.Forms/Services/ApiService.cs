@@ -15,8 +15,8 @@ namespace ComicVine.Forms.Services
     {
         // USE YOUR API KEY HERE - To get your own API key go here (it's free) https://comicvine.gamespot.com/api/
         // SET A CUSTOMER USER AGENT HERE - Use a unique identifier for your app (e.g. "MyAwesomeComicVineApp"), otherwise the service WILL THINK YOU ARE A BOT AND RETURN A 403.
-        private static string _comicVineApiKey = "";
-        private static string _uniqueUserAgentString = "";
+        public static string ComicVineApiKey = "";
+        public static string UniqueUserAgentString = "";
         
         private static readonly HttpClient Client;
         private static string ApiRoot = "https://comicvine.gamespot.com/api/";
@@ -29,7 +29,7 @@ namespace ComicVine.Forms.Services
             var handler = new HttpClientHandler { AllowAutoRedirect = false };
 
             Client = new HttpClient(handler);
-            Client.DefaultRequestHeaders.Add("User-Agent", _uniqueUserAgentString);
+            Client.DefaultRequestHeaders.Add("User-Agent", UniqueUserAgentString);
 
             // This sets the HttpClient instance that FFImageLoading will use to fetch images, it's helpful when you have authentication or special headers
             FFImageLoading.ImageService.Instance.Initialize(new Configuration
@@ -41,7 +41,7 @@ namespace ComicVine.Forms.Services
         public static async Task<CharactersResult> GetCharactersAsync(int offset, int limit = 25)
         {
             var query = $"{ApiRoot}characters?format=json" +
-                        $"&api_key={_comicVineApiKey}" +
+                        $"&api_key={ComicVineApiKey}" +
                         $"&offset={offset}" +
                         $"&limit={limit}";
 
@@ -83,7 +83,7 @@ namespace ComicVine.Forms.Services
         public static async Task<VideosResult> GetVideosAsync(int offset, int limit = 25)
         {
             var query = $"{ApiRoot}videos?format=json" +
-                        $"&api_key={_comicVineApiKey}" +
+                        $"&api_key={ComicVineApiKey}" +
                         $"&offset={offset}" +
                         $"&limit={limit}";
 
@@ -153,7 +153,7 @@ namespace ComicVine.Forms.Services
         // Only used to load my private API strings from a json file. You can delete this one you hard code your strings above.
         private static void LoadKeysFromJsonFile()
         {
-            if (!string.IsNullOrEmpty(_comicVineApiKey))
+            if (!string.IsNullOrEmpty(ComicVineApiKey))
             {
                 return;
             }
@@ -167,8 +167,8 @@ namespace ComicVine.Forms.Services
 
                 var result = ApiKeyBase.FromJson(json);
 
-                _comicVineApiKey = result.ProtectedValues.ComicVineApiKey;
-                _uniqueUserAgentString = result.ProtectedValues.UniqueUserAgentString;
+                ComicVineApiKey = result.ProtectedValues.ComicVineApiKey;
+                UniqueUserAgentString = result.ProtectedValues.UniqueUserAgentString;
             }
         }
     }

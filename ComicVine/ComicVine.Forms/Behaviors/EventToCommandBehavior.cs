@@ -7,7 +7,7 @@ namespace ComicVine.Forms.Behaviors
 {
     public class EventToCommandBehavior : BehaviorBase<View>
     {
-        private Delegate eventHandler;
+        private Delegate _eventHandler;
 
         public static readonly BindableProperty EventNameProperty = BindableProperty.Create("EventName", typeof(string), typeof(EventToCommandBehavior), null, propertyChanged: OnEventNameChanged);
         public static readonly BindableProperty CommandProperty = BindableProperty.Create("Command", typeof(ICommand), typeof(EventToCommandBehavior));
@@ -63,8 +63,8 @@ namespace ComicVine.Forms.Behaviors
                 throw new ArgumentException($"EventToCommandBehavior: Can't register the '{EventName}' event.");
             }
             MethodInfo methodInfo = typeof(EventToCommandBehavior).GetTypeInfo().GetDeclaredMethod("OnEvent");
-            eventHandler = methodInfo.CreateDelegate(eventInfo.EventHandlerType, this);
-            eventInfo.AddEventHandler(AssociatedObject, eventHandler);
+            _eventHandler = methodInfo.CreateDelegate(eventInfo.EventHandlerType, this);
+            eventInfo.AddEventHandler(AssociatedObject, _eventHandler);
         }
 
         private void DeregisterEvent(string name)
@@ -74,7 +74,7 @@ namespace ComicVine.Forms.Behaviors
                 return;
             }
 
-            if (eventHandler == null)
+            if (_eventHandler == null)
             {
                 return;
             }
@@ -83,8 +83,8 @@ namespace ComicVine.Forms.Behaviors
             {
                 throw new ArgumentException($"EventToCommandBehavior: Can't de-register the '{EventName}' event.");
             }
-            eventInfo.RemoveEventHandler(AssociatedObject, eventHandler);
-            eventHandler = null;
+            eventInfo.RemoveEventHandler(AssociatedObject, _eventHandler);
+            _eventHandler = null;
         }
 
         private void OnEvent(object sender, object eventArgs)

@@ -48,11 +48,11 @@ namespace ComicVine.Forms.Services
             try
             {
                 // This is necessary because the API does a redirect
-                using (HttpResponseMessage response = await Client.GetAsync(query))
+                using (var response = await Client.GetAsync(query))
                 {
                     if (response.StatusCode == HttpStatusCode.Redirect || response.StatusCode == HttpStatusCode.MovedPermanently)
                     {
-                        using (HttpResponseMessage fallbackResponseMessage = await Client.GetAsync(response.Headers.Location))
+                        using (var fallbackResponseMessage = await Client.GetAsync(response.Headers.Location))
                         using (var streamResult = await fallbackResponseMessage.Content.ReadAsStreamAsync())
                         using (var reader = new StreamReader(streamResult))
                         {
@@ -89,11 +89,11 @@ namespace ComicVine.Forms.Services
 
             try
             {
-                using (HttpResponseMessage response = await Client.GetAsync(query))
+                using (var response = await Client.GetAsync(query))
                 {
                     if (response.StatusCode == HttpStatusCode.Redirect || response.StatusCode == HttpStatusCode.MovedPermanently)
                     {
-                        using (HttpResponseMessage fallbackResponseMessage = await Client.GetAsync(response.Headers.Location))
+                        using (var fallbackResponseMessage = await Client.GetAsync(response.Headers.Location))
                         using (var streamResult = await fallbackResponseMessage.Content.ReadAsStreamAsync())
                         using (var reader = new StreamReader(streamResult))
                         {
@@ -121,33 +121,7 @@ namespace ComicVine.Forms.Services
 #endif
             }
         }
-
-        public static async Task<MemoryStream> GetImageAsync(string url)
-        {
-            try
-            {
-                using (HttpResponseMessage response = await Client.GetAsync(url))
-                {
-                    var ms = new MemoryStream();
-                    await response.Content.CopyToAsync(ms);
-                    ms.Position = 0;
-                    return ms;
-                }
-
-            }
-            catch (Exception e)
-            {
-                Debug.WriteLine($"ApiService GetCharactersAsync Exception: {e}");
-#if DEBUG
-                // did you forget to add your API key (see the top of this class)?
-                throw;
-#else
-                return null;
-#endif
-            }
-        }
-
-
+        
 
         // NOT NEEDED
         // Only used to load my private API strings from a json file. You can delete this one you hard code your strings above.

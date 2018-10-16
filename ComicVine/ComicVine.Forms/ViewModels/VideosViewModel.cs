@@ -11,9 +11,9 @@ namespace ComicVine.Forms.ViewModels
 {
     public class VideosViewModel : ViewModelBase
     {
-        private int currentItemCount;
-        private int totalItemCount;
-        private bool isLoadOnDemandActive;
+        private int _currentItemCount;
+        private int _totalItemCount;
+        private bool _isLoadOnDemandActive;
 
         public VideosViewModel()
         {
@@ -26,20 +26,20 @@ namespace ComicVine.Forms.ViewModels
 
         public int CurrentItemCount
         {
-            get => currentItemCount;
-            set => SetProperty(ref currentItemCount, value);
+            get => _currentItemCount;
+            set => SetProperty(ref _currentItemCount, value);
         }
 
         public int TotalItemCount
         {
-            get => totalItemCount;
-            set => SetProperty(ref totalItemCount, value);
+            get => _totalItemCount;
+            set => SetProperty(ref _totalItemCount, value);
         }
 
         public bool IsLoadOnDemandActive
         {
-            get => isLoadOnDemandActive;
-            set => SetProperty(ref isLoadOnDemandActive, value);
+            get => _isLoadOnDemandActive;
+            set => SetProperty(ref _isLoadOnDemandActive, value);
         }
 
         public Command LoadOnDemandCommand { get; set; }

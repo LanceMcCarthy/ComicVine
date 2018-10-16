@@ -5,12 +5,12 @@ namespace ComicVine.Forms.ViewModels
 {
     public class CharacterDetailViewModel : ViewModelBase
     {
-        private Character selectedCharacter;
+        private Character _selectedCharacter;
 
         public Character SelectedCharacter
         {
-            get => selectedCharacter;
-            set => SetProperty(ref selectedCharacter, value);
+            get => _selectedCharacter;
+            set => SetProperty(ref _selectedCharacter, value);
         }
     }
 }

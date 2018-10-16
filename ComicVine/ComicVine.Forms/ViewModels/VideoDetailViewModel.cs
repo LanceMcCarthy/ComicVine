@@ -5,7 +5,7 @@ namespace ComicVine.Forms.ViewModels
 {
     public class VideoDetailViewModel : ViewModelBase
     {
-        private Video selectedVideo;
+        private Video _selectedVideo;
 
         public VideoDetailViewModel()
         {
@@ -14,8 +14,8 @@ namespace ComicVine.Forms.ViewModels
 
         public Video SelectedVideo
         {
-            get => selectedVideo; 
-            set => SetProperty(ref selectedVideo, value);
+            get => _selectedVideo; 
+            set => SetProperty(ref _selectedVideo, value);
         }
     }
 }

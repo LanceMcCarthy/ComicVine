@@ -8,21 +8,21 @@ namespace ComicVine.Forms.CustomCells
 {
     public class CustomListViewTemplateCell : ListViewTemplateCell
     {
-        private CachedImage cachedImage;
-        private Label nameLabel;
-        private Label descriptionLabel;
+        private CachedImage _cachedImage;
+        private Label _nameLabel;
+        private Label _descriptionLabel;
         
         protected override void OnBindingContextChanged()
         {
             if (BindingContext is Video video)
             {
-                cachedImage = View.FindByName<CachedImage>("ScreenCachedImage");
-                nameLabel = View.FindByName<Label>("NameLabel");
-                descriptionLabel = View.FindByName<Label>("LengthOfVideoLabel");
+                _cachedImage = View.FindByName<CachedImage>("ScreenCachedImage");
+                _nameLabel = View.FindByName<Label>("NameLabel");
+                _descriptionLabel = View.FindByName<Label>("LengthOfVideoLabel");
 
-                cachedImage.Source = video.Image.ScreenUrl;
-                nameLabel.Text = video.Name;
-                descriptionLabel.Text = TimeSpan.FromSeconds(video.LengthSeconds).ToString("g");
+                _cachedImage.Source = video.Image.ScreenUrl;
+                _nameLabel.Text = video.Name;
+                _descriptionLabel.Text = TimeSpan.FromSeconds(video.LengthSeconds).ToString("g");
             }
             
             base.OnBindingContextChanged();

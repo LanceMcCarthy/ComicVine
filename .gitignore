@@ -287,3 +287,4 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 ComicVine/ComicVine/Portable/Services/ApiKeys.cs
+ComicVine/ComicVine.Forms/keys.json

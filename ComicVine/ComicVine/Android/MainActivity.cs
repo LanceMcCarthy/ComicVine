@@ -14,8 +14,7 @@ namespace ComicVine.Android
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);
-
-            LoadApplication(new Portable.App());
+            LoadApplication(new ComicVine.Forms.App());
         }
     }
 }

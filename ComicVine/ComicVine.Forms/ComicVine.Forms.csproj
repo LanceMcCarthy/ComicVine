@@ -15,13 +15,13 @@
 
 
   <ItemGroup>
-    <PackageReference Include="CommonHelpers" Version="1.0.8" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
-    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.59.3" />
-    <PackageReference Include="Telerik.UI.for.Xamarin" Version="2019.1.220.1" />
-    <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.3.840" />
-    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.3.840" />
-    <PackageReference Include="Xamarin.Forms" Version="3.5.0.169047" />
+    <PackageReference Include="CommonHelpers" Version="1.0.12" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.1.1" />
+    <PackageReference Include="Telerik.UI.for.Xamarin" Version="2020.1.218.1" />
+    <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991640" />
   </ItemGroup>
 
   <ItemGroup>

@@ -30,10 +30,10 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Grid BackgroundColor="LightBlue">
+        <Grid BackgroundColor="LightBlue" >
             <StackLayout Orientation="Horizontal"
                          HorizontalOptions="Center"
                          Margin="5">

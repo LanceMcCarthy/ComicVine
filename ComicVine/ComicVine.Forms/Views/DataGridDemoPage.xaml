@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:dataGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             xmlns:viewModels="clr-namespace:ComicVine.Forms.ViewModels;assembly=ComicVine.Forms"
+             mc:Ignorable="d"
+             x:Class="ComicVine.Forms.Views.DataGridDemoPage">
+
+    <d:ContentPage.BindingContext>
+        <viewModels:DataGridDemoViewModel/>
+    </d:ContentPage.BindingContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid BackgroundColor="LightBlue">
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center"
+                         Margin="5">
+                <Label Text="{Binding CurrentCharactersCount, StringFormat='{0:N0} of '}" />
+                <Label Text="{Binding TotalCharactersCount, StringFormat='{0:N0} loaded'}" />
+            </StackLayout>
+        </Grid>
+
+        <dataGrid:RadDataGrid x:Name="MyDataGrid"
+                              ItemsSource="{Binding Characters}"
+                              AutoGenerateColumns="False"
+                              LoadOnDemandMode="Automatic" 
+                              LoadOnDemandBufferItemsCount="20" 
+                              Grid.Row="1">
+            <dataGrid:RadDataGrid.Columns>
+                <dataGrid:DataGridTextColumn PropertyName="RealName"
+                                             HeaderText="RealName" />
+                <dataGrid:DataGridTextColumn PropertyName="Description"
+                                             HeaderText="Description" />
+            </dataGrid:RadDataGrid.Columns>
+        </dataGrid:RadDataGrid>
+    </Grid>
+</ContentPage>

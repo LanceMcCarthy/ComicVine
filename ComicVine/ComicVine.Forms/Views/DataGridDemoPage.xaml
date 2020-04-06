@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:dataGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
              xmlns:viewModels="clr-namespace:ComicVine.Forms.ViewModels;assembly=ComicVine.Forms"
+             xmlns:behaviors="clr-namespace:ComicVine.Forms.Behaviors;assembly=ComicVine.Forms"
              mc:Ignorable="d"
              x:Class="ComicVine.Forms.Views.DataGridDemoPage">
 
@@ -33,6 +34,10 @@
                               LoadOnDemandMode="Automatic" 
                               LoadOnDemandBufferItemsCount="20" 
                               Grid.Row="1">
+            <dataGrid:RadDataGrid.Behaviors>
+                <behaviors:EventToCommandBehavior EventName="SelectionChanged" 
+                                                  Command="{Binding MyViewModelCommand}" />
+            </dataGrid:RadDataGrid.Behaviors>
             <dataGrid:RadDataGrid.Columns>
                 <dataGrid:DataGridTextColumn PropertyName="RealName"
                                              HeaderText="RealName" />

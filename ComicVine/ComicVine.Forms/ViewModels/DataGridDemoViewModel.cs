@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Linq;
 using ComicVine.Forms.Models;
 using ComicVine.Forms.Services;
 using Telerik.XamarinForms.Common;
+using Telerik.XamarinForms.DataGrid;
 using Xamarin.Forms;
 
 namespace ComicVine.Forms.ViewModels
@@ -42,6 +44,17 @@ namespace ComicVine.Forms.ViewModels
 
                 return null;
             });
+
+            MyViewModelCommand = new Command<DataGridSelectionChangedEventArgs>(DataGridSelectionChanged);
+        }
+
+        private void DataGridSelectionChanged(DataGridSelectionChangedEventArgs e)
+        {
+            if (e.AddedItems?.Any() == true)
+            {
+                // put your selection logic in here
+                var selectedItem = e.AddedItems.FirstOrDefault();
+            }
         }
 
         public LoadOnDemandCollection<Character> Characters { get; set; }
@@ -57,5 +70,7 @@ namespace ComicVine.Forms.ViewModels
             get => _totalCharactersCount;
             set => UpdateValue(ref _totalCharactersCount, value);
         }
+
+        public Command<DataGridSelectionChangedEventArgs> MyViewModelCommand { get; set; }
     }
 }

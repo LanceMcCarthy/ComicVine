@@ -19,7 +19,6 @@
         </StackLayout>
 
         <StackLayout VerticalOptions="Center" Grid.Row="1">
-            <Button Text="Peter DataGrid Demo" Clicked="DataGridButton_OnClicked"></Button>
             <Button Text="Explore Characters" Clicked="CharactersButton_OnClicked" Margin="5"/>
             <Button Text="Watch Videos" Clicked="VideosButton_OnClicked" Margin="5"/>
         </StackLayout>

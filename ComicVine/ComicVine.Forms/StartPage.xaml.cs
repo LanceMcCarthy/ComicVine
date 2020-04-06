@@ -25,10 +25,5 @@ namespace ComicVine.Forms
         {
             await Navigation.PushAsync(new AboutPage());
         }
-
-        private async void DataGridButton_OnClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new DataGridDemoPage());
-        }
     }
 }

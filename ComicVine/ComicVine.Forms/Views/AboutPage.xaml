@@ -5,16 +5,24 @@
              ios:Page.UseSafeArea="true"
              ios:Page.LargeTitleDisplay="Automatic"
              x:Class="ComicVine.Forms.Views.AboutPage">
-    
-    <StackLayout Spacing="5" Margin="20">
-        <Label Text="Lancelot Software, LLC" FontAttributes="Bold" FontSize="Medium" Margin="0,0,0,10"/>
-        <Label Text="Open Source, 2017 MIT License" />
-        <Label Text="https://github.com/LanceMcCarthy/ComicVine" TextColor="Blue" Margin="0,0,0,10">
-            <Label.GestureRecognizers>
-                <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped"></TapGestureRecognizer>
-            </Label.GestureRecognizers>
-        </Label>
-        <Label Text="Credits: Telerik UI for Xamarin, ComicVine API, Newtonsoft, FFImageLoading" LineBreakMode="WordWrap"/>
-    </StackLayout>
-    
+
+    <Grid>
+        <StackLayout Spacing="5"
+                     Margin="20">
+            <Label Text="Lancelot Software, LLC"
+                   FontAttributes="Bold"
+                   FontSize="Medium"
+                   Margin="0,0,0,10" />
+            <Label Text="Open Source, 2017 MIT License" />
+            <Label Text="https://github.com/LanceMcCarthy/ComicVine"
+                   TextColor="Blue"
+                   Margin="0,0,0,10">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Text="Credits: Telerik UI for Xamarin, ComicVine API, Newtonsoft, FFImageLoading"
+                   LineBreakMode="WordWrap" />
+        </StackLayout>
+    </Grid>
 </ContentPage>

@@ -45,8 +45,6 @@ namespace ComicVine.Forms.ViewModels
             });
         }
 
-        #region ComicVine Related
-
         public ListViewLoadOnDemandCollection Characters { get; set; }
 
         public int CurrentCharactersCount
@@ -66,8 +64,5 @@ namespace ComicVine.Forms.ViewModels
             get => _isCharactersLoadOnDemandActive;
             set => SetProperty(ref _isCharactersLoadOnDemandActive, value);
         }
-        
-
-        #endregion
     }
 }

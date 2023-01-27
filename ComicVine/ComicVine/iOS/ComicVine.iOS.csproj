@@ -171,16 +171,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="SkiaSharp">
-      <Version>1.68.1.1</Version>
+      <Version>2.88.3</Version>
     </PackageReference>
     <PackageReference Include="SkiaSharp.Views">
-      <Version>1.68.1.1</Version>
+      <Version>2.88.3</Version>
     </PackageReference>
     <PackageReference Include="SkiaSharp.Views.Forms">
-      <Version>1.68.1.1</Version>
+      <Version>2.88.3</Version>
     </PackageReference>
     <PackageReference Include="Telerik.UI.for.Xamarin">
-      <Version>2020.1.218.1</Version>
+      <Version>2023.1.117.1</Version>
     </PackageReference>
     <PackageReference Include="WebP.Touch">
       <Version>1.0.8</Version>
@@ -192,7 +192,7 @@
       <Version>2.4.11.982</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>4.4.0.991640</Version>
+      <Version>5.0.0.2545</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

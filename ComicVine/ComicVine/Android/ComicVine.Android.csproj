@@ -108,13 +108,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="SkiaSharp">
-      <Version>2.88.3</Version>
+      <Version>2.88.6</Version>
     </PackageReference>
     <PackageReference Include="SkiaSharp.Views">
-      <Version>2.88.3</Version>
+      <Version>2.88.6</Version>
     </PackageReference>
     <PackageReference Include="SkiaSharp.Views.Forms">
-      <Version>2.88.3</Version>
+      <Version>2.88.6</Version>
     </PackageReference>
     <PackageReference Include="Telerik.UI.for.Xamarin">
       <Version>2023.1.117.1</Version>

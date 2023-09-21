@@ -17,7 +17,7 @@
   <ItemGroup>
     <PackageReference Include="CommonHelpers" Version="1.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
-    <PackageReference Include="SkiaSharp.Views.Forms" Version="2.88.3" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="2.88.6" />
     <PackageReference Include="Telerik.UI.for.Xamarin" Version="2023.1.117.1" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
